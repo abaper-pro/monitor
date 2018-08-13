@@ -1,0 +1,11 @@
+<edmx:Edmx xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx" Version="1.0">
+	<edmx:DataServices xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" m:DataServiceVersion="2.0">
+		<Schema xmlns:d="http://schemas.microsoft.com/ado/2007/08/dataservices"
+			xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns="http://schemas.microsoft.com/ado/2008/09/edm"
+			Namespace="iot.iot">
+			<EntityType Name="IOT_VSPType">
+				<Key><PropertyRef Name="ID_VSP"/></Key><Property Name="ID_VSP" Type="Edm.Int32" Nullable="false"/><Property Name="NAME_VSP" Type="Edm.String" MaxLength="40"/><Property Name="ADDRESS" Type="Edm.String" MaxLength="100"/><Property Name="WATER_CAPACITY" Type="Edm.Int32"/><Property Name="WATER_MIN" Type="Edm.Int32"/></EntityType>
+			<EntityContainer Name="iot" m:IsDefaultEntityContainer="true"><EntitySet Name="IOT_VSP" EntityType="iot.iot.IOT_VSPType"/></EntityContainer>
+		</Schema>
+	</edmx:DataServices>
+</edmx:Edmx>

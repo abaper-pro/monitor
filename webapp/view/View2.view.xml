@@ -1,0 +1,86 @@
+<mvc:View xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc" xmlns:core="sap.ui.core" xmlns:l="sap.ui.layout"
+	xmlns:f="sap.ui.layout.form" xmlns:commons="sap.suite.ui.commons" xmlns="sap.m" xmlns:u="sap.ui.unified"
+	controllerName="monitor.monitor.controller.View2" displayBlock="true">
+	<Page title="Подробно">
+		<content>
+			<Toolbar width="100%" id="__toolbar2" design="Solid">
+				<content>
+					<Button xmlns:action="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" width="40px" id="btnDetail"
+						icon="sap-icon://nav-back" type="Transparent" tap="action" action:wiring="\{'tap':\{'navigation':\{'routeName':'View1'\}\}\}"/>
+				</content>
+			</Toolbar>
+			<l:HorizontalLayout id="layout0">
+				<Table noDataText="Drop column list items here and columns in the area above" id="table0" items="{/V_DETAIL}">
+					<items>
+						<ColumnListItem type="Active" id="item0">
+							<cells>
+								<Text text="{NAME_VSP}" id="text0"/>
+								<Text text="{ADDRESS}" id="text1"/>
+								<commons:BulletChart size="XS" scale=" бут" targetValue="{QUAN_FACT}" forecastValue="{QUAN_PLAN}" class="marginTopLeft" press="press"
+									actualValueLabel="">
+									<commons:actual>
+										<commons:BulletChartData value="{QUAN_FACT}" color="{COLOR}"/>
+									</commons:actual>
+									<commons:thresholds>
+										<commons:BulletChartData value="{WATER_MIN}" color="Error"/>
+										<commons:BulletChartData value="{WATER_MIN}" color="Critical"/>
+										<commons:BulletChartData value="{WATER_CAPACITY}" color="Critical"/>
+										<commons:BulletChartData value="{WATER_CAPACITY}" color="Error"/>
+									</commons:thresholds>
+								</commons:BulletChart>
+								<Text text="{NUM_DEV}" id="text2"/>
+								<Text text="{WATER_CAPACITY}" id="text3"/>
+								<Text text="{QUAN_FACT}" id="text4"/>
+								<Text text="{WATER_MIN}" id="text5"/>
+							</cells>
+						</ColumnListItem>
+					</items>
+					<columns>
+						<Column id="column0">
+							<header>
+								<Label text="ВСП" id="label0"/>
+							</header>
+						</Column>
+						<Column id="column1">
+							<header>
+								<Label text="Адрес" id="label1"/>
+							</header>
+						</Column>
+						<Column id="column2">
+							<header>
+								<Label text="Состояние" id="label2"/>
+							</header>
+						</Column>
+						<Column id="column3">
+							<header>
+								<Label text="Кол-во кулеров, шт" id="label3"/>
+							</header>
+						</Column>
+						<Column id="column4">
+							<header>
+								<Label text="Объем хранилища, бут" id="label4"/>
+							</header>
+						</Column>
+						<Column id="column5">
+							<header>
+								<Label text="Текущий запас, бут" id="label5"/>
+							</header>
+						</Column>
+						<Column id="column6">
+							<header>
+								<Label text="Точка перезаказа, бут" id="label6"/>
+							</header>
+						</Column>
+					</columns>
+					<headerToolbar>
+						<Toolbar width="100%" id="toolbar1">
+							<ToolbarSpacer/>
+							<Button icon="sap-icon://sort" tooltip="Sort Categories" press="sortCategories"/>
+							<Button icon="sap-icon://decline" tooltip="Clear all sortings" press="clearAllSortings"/>
+						</Toolbar>
+					</headerToolbar>
+				</Table>
+			</l:HorizontalLayout>
+		</content>
+	</Page>
+</mvc:View>

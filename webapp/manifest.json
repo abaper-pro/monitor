@@ -1,0 +1,140 @@
+{
+	"_version": "1.8.0",
+	"sap.app": {
+		"id": "monitor.monitor",
+		"type": "application",
+		"i18n": "i18n/i18n.properties",
+		"applicationVersion": {
+			"version": "1.0.0"
+		},
+		"title": "{{appTitle}}",
+		"description": "{{appDescription}}",
+		"sourceTemplate": {
+			"id": "servicecatalog.connectivityComponentForManifest",
+			"version": "0.0.0"
+		},
+		"dataSources": {}
+	},
+	"sap.ui": {
+		"technology": "UI5",
+		"icons": {
+			"icon": "",
+			"favIcon": "",
+			"phone": "",
+			"phone@2": "",
+			"tablet": "",
+			"tablet@2": ""
+		},
+		"deviceTypes": {
+			"desktop": true,
+			"tablet": true,
+			"phone": true
+		},
+		"supportedThemes": [
+			"sap_hcb",
+			"sap_belize"
+		]
+	},
+	"sap.ui5": {
+		"rootView": {
+			"viewName": "monitor.monitor.view.app",
+			"type": "XML"
+		},
+		"dependencies": {
+			"minUI5Version": "1.30.0",
+			"libs": {
+				"sap.m": {},
+				"sap.suite.ui.commons": {
+					"minVersion": ""
+				},
+				"sap.ui.commons": {
+					"minVersion": ""
+				},
+				"sap.ui.core": {},
+				"sap.ui.layout": {},
+				"sap.viz": {
+					"minVersion": ""
+				}
+			}
+		},
+		"contentDensities": {
+			"compact": true,
+			"cozy": true
+		},
+		"models": {
+			"i18n": {
+				"type": "sap.ui.model.resource.ResourceModel",
+				"settings": {
+					"bundleName": "monitor.monitor.i18n.i18n"
+				}
+			}
+		},
+		"resources": {
+			"css": [
+				{
+					"uri": "css/style.css"
+				}
+			]
+		},
+		"routing": {
+			"config": {
+				"routerClass": "sap.m.routing.Router",
+				"viewType": "XML",
+				"async": true,
+				"viewPath": "monitor.monitor.view",
+				"controlAggregation": "pages",
+				"controlId": "idAppControl",
+				"clearControlAggregation": false
+			},
+			"routes": [
+				{
+					"name": "View1",
+					"pattern": "",
+					"titleTarget": "",
+					"greedy": false,
+					"target": [
+						"View1"
+					]
+				},
+				{
+					"name": "View2",
+					"pattern": "View2",
+					"target": [
+						"View2"
+					]
+				}
+			],
+			"targets": {
+				"View1": {
+					"viewType": "XML",
+					"transition": "slide",
+					"clearControlAggregation": false,
+					"viewName": "View1",
+					"routerClass": "sap.m.routing.Router",
+					"async": true,
+					"viewPath": "monitor.monitor.view",
+					"controlAggregation": "pages",
+					"controlId": "idAppControl"
+				},
+				"View2": {
+					"viewType": "XML",
+					"viewName": "View2",
+					"routerClass": "sap.m.routing.Router",
+					"async": true,
+					"viewPath": "monitor.monitor.view",
+					"controlAggregation": "pages",
+					"controlId": "idAppControl",
+					"clearControlAggregation": false
+				},
+				"app": {
+					"viewType": "XML",
+					"viewName": "app"
+				}
+			}
+		}
+	},
+	"sap.platform.hcp": {
+		"uri": "webapp",
+		"_version": "1.1.0"
+	}
+}

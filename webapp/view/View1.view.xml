@@ -1,0 +1,81 @@
+<mvc:View xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:viz="sap.viz.ui5.controls" xmlns:layout="sap.ui.commons.layout" xmlns:viz.feeds="sap.viz.ui5.controls.common.feeds" xmlns:viz.data="sap.viz.ui5.data" xmlns:core="sap.ui.core" xmlns:com="sap.suite.ui.commons" xmlns:vbm="sap.ui.vbm" controllerName="monitor.monitor.controller.View1" displayBlock="true">
+			<Page title="{i18n>title}" titleLevel="H1">
+				<content>
+					<Toolbar width="100%" id="__toolbar2" design="Solid">
+						<content>
+							<Button width="40px" id="btnDetail" icon="sap-icon://table-view" type="Transparent" press="OnDetail" tap="action" xmlns:action="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" action:wiring="\{'tap':\{'navigation':\{'routeName':'View2'\}\}\}"/>
+						</content>
+					</Toolbar>
+					<layout:MatrixLayout width="100%" widths="50%,50%">
+						<layout:MatrixLayoutRow>
+							<layout:MatrixLayoutCell>
+								<VBox width="100%" height="10px" direction="Column" id="vbox0"/>
+							</layout:MatrixLayoutCell>
+							<layout:MatrixLayoutCell/>
+						</layout:MatrixLayoutRow>
+						<layout:MatrixLayoutRow>
+							<layout:MatrixLayoutCell>
+								<Panel id="panel1" width="95%" height="95%" align="center">
+									<com:ChartContainer id="chartContainer" showFullScreen="false" showPersonalization="false" autoAdjustHeight="true" showLegend="false" showZoom="false" showLegendButton="false" personalizationPress="attachPersonalizationPress" contentChange="attachContentChange" title="Анализ потребления, бут/сут">
+										<com:content>
+											<com:ChartContainerContent icon="sap-icon://line-chart" title="Line Chart">
+												<com:content>
+													<viz:VizFrame id="chartContainerVizFrame" height="300px" width="100%" uiConfig="{applicationSet:'fiori'}"/>
+												</com:content>
+											</com:ChartContainerContent>
+										</com:content>
+									</com:ChartContainer>
+								</Panel>
+							</layout:MatrixLayoutCell>
+							<layout:MatrixLayoutCell>
+								<Panel id="panel2" width="95%" height="95%" align="center">
+									<com:ChartContainer id="chartContainer2" showFullScreen="false" showPersonalization="false" autoAdjustHeight="true" showLegend="false" showZoom="false" showLegendButton="false" personalizationPress="attachPersonalizationPress" contentChange="attachContentChange" title="Прогноз потребления, бут">
+										<com:content>
+											<com:ChartContainerContent icon="sap-icon://line-chart" title="Line Chart">
+												<com:content>
+													<viz:VizFrame id="chartContainerVizFrame2" height="300px" width="100%" uiConfig="{applicationSet:'fiori'}"/>
+												</com:content>
+											</com:ChartContainerContent>
+										</com:content>
+									</com:ChartContainer>
+								</Panel>
+							</layout:MatrixLayoutCell>
+						</layout:MatrixLayoutRow>
+						<layout:MatrixLayoutRow>
+							<layout:MatrixLayoutCell>
+								<VBox width="100%" height="10px" direction="Column" id="vbox1"/>
+							</layout:MatrixLayoutCell>
+							<layout:MatrixLayoutCell/>
+						</layout:MatrixLayoutRow>
+						<layout:MatrixLayoutRow>
+							<layout:MatrixLayoutCell>
+								<Panel id="panel3" width="95%" height="95%" align="center">
+									<com:ChartContainer id="chartContainer3" showFullScreen="false" showPersonalization="false" autoAdjustHeight="true" showLegend="true" showZoom="false" showLegendButton="true" personalizationPress="attachPersonalizationPress" contentChange="attachContentChange" title="Анализ запасов">
+										<com:content>
+											<com:ChartContainerContent icon="sap-icon://line-chart" title="Line Chart">
+												<com:content>
+													<viz:VizFrame id="chartContainerVizFrame3" height="300px" width="100%" uiConfig="{applicationSet:'fiori'}"/>
+												</com:content>
+											</com:ChartContainerContent>
+										</com:content>
+									</com:ChartContainer>
+								</Panel>
+							</layout:MatrixLayoutCell>
+							<layout:MatrixLayoutCell>
+								<Panel id="panel4" width="95%" height="95%" align="center">
+									<com:ChartContainer id="chartContainer4" showFullScreen="false" showPersonalization="false" autoAdjustHeight="true" showLegend="false" showZoom="false" showLegendButton="false" personalizationPress="attachPersonalizationPress" contentChange="attachContentChange" title="План пополнения, бут">
+										<com:content>
+											<com:ChartContainerContent icon="sap-icon://line-chart" title="Line Chart">
+												<com:content>
+													<viz:VizFrame id="chartContainerVizFrame4" height="300px" width="100%" uiConfig="{applicationSet:'fiori'}"/>
+												</com:content>
+											</com:ChartContainerContent>
+										</com:content>
+									</com:ChartContainer>
+								</Panel>
+							</layout:MatrixLayoutCell>
+						</layout:MatrixLayoutRow>
+					</layout:MatrixLayout>
+				</content>
+			</Page>
+</mvc:View>
