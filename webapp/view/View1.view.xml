@@ -3,16 +3,11 @@
 				<content>
 					<Toolbar width="100%" id="__toolbar2" design="Solid">
 						<content>
+							<ToolbarSpacer/>
 							<Button width="40px" id="btnDetail" icon="sap-icon://table-view" type="Transparent" press="OnDetail" tap="action" xmlns:action="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" action:wiring="\{'tap':\{'navigation':\{'routeName':'View2'\}\}\}"/>
 						</content>
 					</Toolbar>
-					<layout:MatrixLayout width="100%" widths="50%,50%">
-						<layout:MatrixLayoutRow>
-							<layout:MatrixLayoutCell>
-								<VBox width="100%" height="10px" direction="Column" id="vbox0"/>
-							</layout:MatrixLayoutCell>
-							<layout:MatrixLayoutCell/>
-						</layout:MatrixLayoutRow>
+					<layout:MatrixLayout height="calc(100% - 100px)" widths="50%,50%">
 						<layout:MatrixLayoutRow>
 							<layout:MatrixLayoutCell>
 								<Panel id="panel1" width="95%" height="95%" align="center">
@@ -20,7 +15,7 @@
 										<com:content>
 											<com:ChartContainerContent icon="sap-icon://line-chart" title="Line Chart">
 												<com:content>
-													<viz:VizFrame id="chartContainerVizFrame" height="300px" width="100%" uiConfig="{applicationSet:'fiori'}"/>
+													<viz:VizFrame id="chartContainerVizFrame" height="100%" width="100%" uiConfig="{applicationSet:'fiori'}"/>
 												</com:content>
 											</com:ChartContainerContent>
 										</com:content>
@@ -33,7 +28,7 @@
 										<com:content>
 											<com:ChartContainerContent icon="sap-icon://line-chart" title="Line Chart">
 												<com:content>
-													<viz:VizFrame id="chartContainerVizFrame2" height="300px" width="100%" uiConfig="{applicationSet:'fiori'}"/>
+													<viz:VizFrame id="chartContainerVizFrame2" height="100%" width="100%" uiConfig="{applicationSet:'fiori'}"/>
 												</com:content>
 											</com:ChartContainerContent>
 										</com:content>
@@ -43,18 +38,12 @@
 						</layout:MatrixLayoutRow>
 						<layout:MatrixLayoutRow>
 							<layout:MatrixLayoutCell>
-								<VBox width="100%" height="10px" direction="Column" id="vbox1"/>
-							</layout:MatrixLayoutCell>
-							<layout:MatrixLayoutCell/>
-						</layout:MatrixLayoutRow>
-						<layout:MatrixLayoutRow>
-							<layout:MatrixLayoutCell>
 								<Panel id="panel3" width="95%" height="95%" align="center">
 									<com:ChartContainer id="chartContainer3" showFullScreen="false" showPersonalization="false" autoAdjustHeight="true" showLegend="true" showZoom="false" showLegendButton="true" personalizationPress="attachPersonalizationPress" contentChange="attachContentChange" title="Анализ запасов">
 										<com:content>
 											<com:ChartContainerContent icon="sap-icon://line-chart" title="Line Chart">
 												<com:content>
-													<viz:VizFrame id="chartContainerVizFrame3" height="300px" width="100%" uiConfig="{applicationSet:'fiori'}"/>
+													<viz:VizFrame id="chartContainerVizFrame3" height="100%" width="100%" uiConfig="{applicationSet:'fiori'}"/>
 												</com:content>
 											</com:ChartContainerContent>
 										</com:content>
@@ -67,7 +56,7 @@
 										<com:content>
 											<com:ChartContainerContent icon="sap-icon://line-chart" title="Line Chart">
 												<com:content>
-													<viz:VizFrame id="chartContainerVizFrame4" height="300px" width="100%" uiConfig="{applicationSet:'fiori'}"/>
+													<viz:VizFrame id="chartContainerVizFrame4" height="100%" width="100%" uiConfig="{applicationSet:'fiori'}"/>
 												</com:content>
 											</com:ChartContainerContent>
 										</com:content>

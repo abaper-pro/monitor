@@ -320,6 +320,10 @@ sap.ui.define(["sap/ui/core/mvc/Controller"], function (Controller) {
 			aFilters = [];
 			aFilters.push(new sap.ui.model.Filter("PL_DATE", sap.ui.model.FilterOperator.BT, today, enddate));
 			oVizFrame4.getDataset().getBinding("data").filter(aFilters);
+			setInterval(jQuery.proxy(function(){
+    			//this.getView().getModel().refresh(true);
+				this.getView().byId(this._constants_char1.vizFrame.id).getModel().refresh(true);
+			},this),1000); //1000 for every 10 sec.			
 			/*oModel.read(
         		"/IOT_FACT",
         		null, [],

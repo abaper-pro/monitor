@@ -102,6 +102,13 @@
 					"target": [
 						"View2"
 					]
+				},
+				{
+					"name": "View3",
+					"pattern": "View3",
+					"target": [
+						"View3"
+					]
 				}
 			],
 			"targets": {
@@ -128,7 +135,17 @@
 				},
 				"app": {
 					"viewType": "XML",
-					"viewName": "app"
+					"viewName": "app",
+					"routerClass": "sap.m.routing.Router",
+					"async": true,
+					"viewPath": "monitor.monitor.view",
+					"controlAggregation": "pages",
+					"controlId": "idAppControl",
+					"clearControlAggregation": false
+				},
+				"View3": {
+					"viewType": "XML",
+					"viewName": "View3"
 				}
 			}
 		}

@@ -17,7 +17,7 @@
     background: url(/image/sberbank_logo.png) left center no-repeat;
 }
 .sapMPanel{
-	border-radius: 10px 10px 10px 10px;
+	border-radius: 10px 10px 10px 10px; 
 	/*border-style: groove;
     /*box-shadow: 0 0 5px 5px rgba(99,127,153,0.5);*/
     background-color: #eff4f9;
